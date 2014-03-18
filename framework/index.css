@@ -1,0 +1,214 @@
+@charset "utf-8";
+/*
+ * Copy Right: Tencent ISUX
+ * Project:Qzone V8
+ * Comments:封装的常用class
+ * @author jeannewoo,chandleryu,ytzong
+ */
+
+/*
+
+布局相关
+.left			向左浮动
+.right			向右浮动
+.clear-fix		清除当前窗口的浮动
+.none			隐藏一个元素(display:none)
+.ui-hidden		隐藏一个元素(visibility:hidden)
+.ui-mask        半透明遮罩，广泛运用与图片上的信息蒙板，统一70%透明度(RGBA/ARGB全浏览器通用)
+
+
+基本的表现解决方案
+.textoverflow	文本溢出点点点
+.noline			无下划线
+.ui-icon		icon的基类
+
+页面表现元素
+.bt-tx,.bt-tx2,.bt-tx3,.bt-tx4,.bt-tx5,.bt-tx6,.bt-tx7		普通的文本按钮（历史原因，数字表示按钮内中文字符个数）
+.gb-bt			大按钮（无宽高限制）
+.gb-bt2			大按钮（无宽高限制，V6新加，带高光，渐变）
+.textinput		单行输入框
+.textarea		多行输入框
+.ui-x			关闭叉叉
+
+提醒小数字气泡
+.ui-sup			提醒小数字气泡
+.ui-sup b		提醒小数字气泡数字
+
+三角
+.ui-trig		三角基类
+.ui-trig_l		向左的三角
+.ui-trig_r		向右的三角
+.ui-trig_t		向上的三角
+.ui-trig_b		向下的三角
+
+
+配色api
+.c-tx			链接文本色
+.c-tx2			默认文本色
+.c-tx3			弱化文本色
+.bg			模块背景色
+.bg2			评论模块背景颜色
+.bg3			辅助背景色
+.bor			模块外边框色
+.bor2			TAB线条色
+.bor3			辅助线条色
+.bor-bg			与bg背景色相同的边框色
+.bor-bg2		与bg2背景色相同的边框色
+.bor-bg3		与bg3背景色相同的边框色
+.bg-bor			与bor边框色相同的背景色
+.bg-bor2		与bor2边框色相同的背景色
+.bg-bor3		与bor3边框色相同的背景色
+
+*/
+
+/*gb class 开始*/
+
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after,
+.qz-grid:before,
+.qz-grid:after,
+.qz-grid-visible:before,
+.qz-grid-visible:after {
+  content: "";
+  display: block;
+}
+.clearfix:after,
+.qz-grid:after,
+.qz-grid-visible:after {clear: both;}
+.clearfix,
+.qz-grid,
+.qz-grid-visible:after {*zoom: 1;} /* IE < 8 */
+
+.qz-left { float: left;_margin-right:-3px;}
+.qz-right{float:right;_margin-left:-3px;}
+.qz-main { display:block; overflow:hidden; #zoom:1;}
+.qz-grid-visible:before,
+.qz-grid-visible:after{ display:table;}
+.qz-grid-visible .qz-main{overflow:visible; display: table-cell; vertical-align: top;  width: 10000px !important;  #display: block;  #zoom: 1; #width: auto !important;}
+.qz-grid-visible .qz-main .break-word{display:table;width:100%;table-layout: fixed;word-wrap:break-word}
+/*文本溢出隐藏*/
+.textoverflow /* 此命名有问题，text-overflow 有两个值 clip|ellipsis，故建议用以下命名  */,
+.ellipsis{display:inline-block;white-space: nowrap;word-wrap:normal;overflow: hidden;text-overflow:ellipsis;max-width:100%;_width:100%;}
+
+/*隐藏一个元素*/
+.none{display:none !important;}
+/* Comments:无障碍推荐文本隐藏方式 http://www.topcss.org/?p=393 */
+.hide-clip {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+body:hover .hide-clip a,
+body:hover .hide-clip input,
+body:hover .hide-clip button {
+  display: none !important;
+}
+
+
+.left{float:left;}/*老的被用了,只能用这个了*/
+.right{float:right;}
+
+/*.gb_bg_iframe{opacity:0;width:100%;left:0;height:100%;position:absolute;top:0;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);}*//*全局遮挡用iframe*/
+/*gb class 结束*/
+
+
+
+
+/*UI libiry 开始*/
+.ui-icon{display:inline-block;background-repeat:no-repeat;font-size:0;overflow:hidden;-webkit-text-size-adjust:none;}
+.ui-hidden{visibility:hidden !important;}
+/*半透明遮罩*/
+/* @Comments:广泛运用与图片上的信息蒙板，统一70%透明度(RGBA/ARGB全浏览器通用)*/
+.ui-mask {background-color: rgba(0, 0, 0, 0.7);}
+.ui-mask a {color:#fff;}
+
+
+.ui-noline,
+.ui-noline:hover{text-decoration:none;}
+
+
+
+.textinput{border-width:1px;border-style:solid;outline:none;cursor:text}
+.textarea{border-width:1px;border-style:solid;word-break: break-word;word-wrap: break-word;outline:none;cursor:text}
+.ui-x{cursor: pointer;display: block;font-family: simsun;font-size: 13px;font-weight: bold;height: 14px;line-height:1.333;position: absolute;right: 10px;text-align: center;top: 9px;width: 14px;zoom:1;border-radius: 1px;-webkit-text-size-adjust:none;overflow:hidden;}
+.ui-x:hover{text-decoration:none;}
+/*提醒小数字气泡*/
+.ui-sup{background-color:#FE6600;color:#FFF;padding:1px 0;font-style:normal;font-weight:bold;font-family:Tahoma;font-size:12px;line-height:12px;height:13px;display:inline-block;-webkit-text-size-adjust:none;}/* trick:chrome中文版字体无法少于12px,会造成此块无法缩放,不过去他妈的缩放*/
+.ui-sup b{background-color:#FE6600;margin:0 -1px;display:inline-block;height:13px;padding:0 3px;_position:relative;left:-1px;}
+
+
+
+/*button*/
+/* @comment:改为不以字数来定义的按钮，分大尺寸和小尺寸两种接口。*/
+.gb-bt,
+.gb-bt2{border-width:1px;border-style:solid;text-align:center;height:20px;line-height:18px;*line-height:16px;_line-height:19px;display:inline-block;padding-bottom:2px;overflow:hidden;font-family: Tahoma}/*firefox4 safari 有文字默认左右3px | IE67默认6px日啊*/
+.gb-bt,
+.gb-bt2{padding:0 7px 2px;padding:0 10px\9;*padding:0 4px;}
+a.gb-bt,
+a.gb-bt2{padding:0 10px}
+a.gb-bt,
+a.gb-bt2{font-family:"Simsun";display:inline-block;height:18px;padding-bottom:0;line-height:19px\9;}/*font-family:IE下中英混排垂直不对齐问题*/
+.gb-bt:hover{text-decoration:none;cursor:pointer;}
+
+
+/*border style*/
+.bor,.tbor,.bbor,.lbor,.rbor,.bor2,.tbor2,.bbor2,.lbor2,.rbor2,.bgr,.bgr2,.bgr3,.bor3,.lbor3,.rbor3,.bbor3,.tbor3,.bor4,.lbor4,.rbor4,.bbor4,.tbor4,.bor5,.lbor5,.rbor5,.bbor5,.tbor5{border-width:1px;}
+.bor,.bgr,.bgr2,.bgr3,.bor2,.bor3,.bor4,.bor5{border-style:solid;}
+.tbor,.tbor2,.tbor3,.tbor4,.tbor5{border-style:solid none none none;}
+.bbor,.bbor2,.bbor3,.bbor4,.bbor5{border-style:none none solid none;}
+.lbor,.lbor2,.lbor3,.lbor4,.lbor5{border-style:none none none solid;}
+.rbor,.rbor2,.rbor3,.rbor4,.rbor5{border-style:none solid none none;}
+
+/* tooltip */
+.ui-tooltip,
+.ui-tooltip-x{position:absolute; z-index:100}
+.ui-tooltip .inner,
+.ui-tooltip-x .inner{position:relative}
+.ui-tooltip .arrow,
+.ui-tooltip-x .arrow{ display:block;  border-style:solid dashed; border-color:transparent;font-size: 0; overflow:hidden;height: 0;width: 0;}
+
+.ui-tooltip-x .arrow-outer{ display:block; position:relative; z-index:2; margin-left:10px;  overflow:hidden;font-size:0}
+.ui-tooltip-x .arrow-up-outer{ bottom:-1px;}
+.ui-tooltip-x .arrow-down-outer{ top:-1px;}
+.ui-tooltip .bd{ padding:3px 6px 4px; padding-top:5px \9; #padding-top:7px; border-radius:2px; background-color:#4d4d4d; color:white; text-align:center;}
+.ui-tooltip .arrow{position: relative; left:50%;margin-left:-5px; border-width: 5px;}
+
+.ui-tooltip .arrow-down{border-top-color: #4d4d4d;}
+.ui-tooltip .arrow-up{border-bottom-color: #4d4d4d;}
+
+
+.ui-tooltip-x .bd{ position:relative; padding:18px 20px;border-radius:2px; border:1px #e2e2e2 solid; background-color: white;box-shadow: 0px 0px 2px -1px #f2f2f2;}
+.ui-tooltip-x .arrow{border-width:10px;}
+.ui-tooltip-x .arrow-up{border-bottom-color: #e2e2e2;}
+.ui-tooltip-x .arrow-up-bg{position:absolute;top:1px; left:1px;border-bottom-color: white;}
+
+.ui-tooltip-x .arrow-down{border-top-color: #e2e2e2;}
+.ui-tooltip-x .arrow-down-bg{position:absolute; top:-1px; left:1px;border-top-color: white;}
+
+
+.ui-tooltip .arrow-down,
+.ui-tooltip-x .arrow-down {border-bottom: 0;}
+.ui-tooltip .arrow-up,
+.ui-tooltip-x .arrow-up {border-top: 0;}
+
+.ui-tooltip-x .close{position:absolute; right:0;top:0;}
+.ui-tooltip-x .close:hover{text-decoration:none;}
+.ui-tooltip-x .close{width:16px;height:16px;background-image:url(img/icon-slice/ui-tooltipx-close.png);}
+.ui-tooltip-x .close:hover{width:16px;height:16px;background-image:url(img/icon-slice/ui-tooltipx-close-hover.png); background-color:#67b1ea}
+
+/* 未知高度垂直居中辅助 */
+.ie-center{display:inline-block;height:100%;width:0;overflow:hidden;font-size:0;vertical-align:middle;}
+
+
+/* 下来菜单 */
+.ui-dropdown {position:absolute; z-index:99;}
+.ui-dropdown-list a{display:block; padding:8px 10px; white-space:nowrap}
+.ui-dropdown-list a:hover{ text-decoration:none;}
+
+

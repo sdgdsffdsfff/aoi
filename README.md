@@ -1,4 +1,4 @@
 aoi
 ===
 
-qzone styles and images
+qzone components.

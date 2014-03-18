@@ -1,0 +1,751 @@
+﻿<!DOCTYPE HTML>
+<html class="pg-profile">
+<head>
+<meta charset="UTF-8">
+<title>弹出层</title>
+<meta name="description" content="" />
+<meta name="author" content="isux" />
+<link href="../reset/index.css" rel="stylesheet"/>
+<link href="../framework/index.css" rel="stylesheet"/>
+<link href="../qz-scroll/index.css" rel="stylesheet"/>
+<link href="../qz-button/index.css" rel="stylesheet"/>
+<link href="index.css" rel="stylesheet"/>
+<style>
+/* debug html{background-color:rgba(0,0,0, 0.6)} */
+
+.ui-dialog{position:static; display:inline-block; #display:inline;#zoom:1; vertical-align:top; margin:10px 0 50px 50px;}
+.ui-dl-bd{height:200px; background-color:#ededed;}
+.ui-super-light-dialog .ui-dl-bd{background:none;height:auto}
+
+/* guide */
+.guide{ margin:10px; border:1px gold solid; background-color: lightgoldenrodyellow;padding:15px 20px; font-size:14px;}
+</style>
+</head>
+
+<body class="os-win7">
+
+<div class="guide">
+	<ul>
+		<li>浮层分为有tab和无tab两种样式，大小分为750px、600px、520px和380px</li>
+		<li>部分弹出层 bd、ft 为 iframe，为保证以后方便迁移为非 iframe，故要求同时兼容 iframe 及非 iframe，具体实现请参照 <a href="dialog-iframe.html">qz-dialog-iframe.html</a>，html 节点 class="pg-dialog" 即可</li>
+	</ul>
+</div>
+
+<div class="ui-dialog ui-dialog-xl">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+				<div class="qz-main">
+					<h3>弹出层750</h3>
+				</div>
+			</div>
+			<ul class="dialog-nav clearfix">
+				<li class="current"><a href="#">选中态</a></li>
+				<li><a href="#">默认态</a></li>
+			</ul>
+		</div>
+		<div class="ui-dl-bd">
+			<div class="ui-dl-loading"><s class="ui-icon sp-dl-loading"></s></div>
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a><a class="qz-button" href="#"><span class="txt">取消</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui-dialog ui-dialog-xl">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+				<div class="qz-main">
+					<h3>弹出层750 iframe</h3>
+				</div>
+			</div>
+			<ul class="dialog-nav clearfix">
+				<li class="current"><a href="#">选中态</a></li>
+				<li><a href="#">默认态</a></li>
+			</ul>
+		</div>
+		<div class="ui-dl-bd">
+			<iframe src="dialog-iframe.html" height="200" frameborder="0"></iframe>
+		</div>
+	</div>
+</div>
+<div class="ui-dialog ui-dialog-xl">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+				<div class="qz-main">
+					<h3>弹出层750</h3>
+				</div>
+			</div>
+			<ul class="dialog-nav clearfix">
+				<li class="current"><a href="#">选中态</a></li>
+				<li><a href="#">默认态</a></li>
+			</ul>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a><a class="qz-button" href="#"><span class="txt">取消</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="ui-dialog ui-dialog-xl">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+				<div class="qz-main">
+					<h3>弹出层750</h3>
+				</div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a><a class="qz-button" href="#"><span class="txt">取消</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui-dialog ui-dialog-xl ui-popover ui-popover-top-right">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+				<div class="qz-main">
+					<h3>弹出层750</h3>
+				</div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a><a class="qz-button" href="#"><span class="txt">取消</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<div class="ui-dialog ui-dialog-l">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+				<div class="qz-main">
+					<h3>弹出层600</h3>
+				</div>
+			</div>
+			<ul class="dialog-nav clearfix">
+				<li class="current"><a href="#">选中态</a></li>
+				<li><a href="#">默认态</a></li>
+			</ul>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a><a class="qz-button" href="#"><span class="txt">取消</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="ui-dialog ui-dialog-l">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+				<div class="qz-main">
+					<h3>弹出层600</h3>
+				</div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+<div style="height: 100px;overflow-y: auto;padding: 15px;
+padding-right: 0;" class="qz-scrollbar">阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放阿斯顿发放</div>
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a><a class="qz-button" href="#"><span class="txt">取消</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui-dialog ui-dialog-l ui-popover ui-popover-top-right">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+				<div class="qz-main">
+					<h3>弹出层600</h3>
+				</div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a><a class="qz-button" href="#"><span class="txt">取消</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+
+<div class="ui-dialog ui-dialog-m">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+				<div class="qz-main">
+					<h3>弹出层520</h3>
+				</div>
+			</div>
+			<ul class="dialog-nav clearfix">
+				<li class="current"><a href="#">选中态</a></li>
+				<li><a href="#">默认态</a></li>
+			</ul>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a><a class="qz-button" href="#"><span class="txt">取消</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui-dialog ui-dialog-m">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+				<div class="qz-main">
+					<h3>弹出层520</h3>
+				</div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a><a class="qz-button" href="#"><span class="txt">取消</span></a>				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui-dialog ui-dialog-m ui-popover ui-popover-top-right">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+				<div class="qz-main">
+					<h3>弹出层520</h3>
+				</div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a><a class="qz-button" href="#"><span class="txt">取消</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<div class="ui-dialog ui-dialog-s">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+				<div class="qz-main">
+					<h3>弹出层380</h3>
+				</div>
+			</div>
+			<ul class="dialog-nav clearfix">
+				<li class="current"><a href="#">选中态</a></li>
+				<li><a href="#">默认态</a></li>
+			</ul>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a><a class="qz-button" href="#"><span class="txt">取消</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui-dialog ui-dialog-s">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+				<div class="qz-main">
+					<h3>弹出层380</h3>
+				</div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a><a class="qz-button" href="#"><span class="txt">取消</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui-dialog ui-dialog-s ui-dialog-notitle">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="actions">
+				<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a><a class="qz-button" href="#"><span class="txt">取消</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui-dialog ui-dialog-s ui-popover ui-popover-top-right">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+				<div class="qz-main">
+					<h3>弹出层380</h3>
+				</div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a><a class="qz-button" href="#"><span class="txt">取消</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<div class="ui-dialog ui-light-dialog ui-light-dialog-s ui-popover ui-popover-top-right">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+				<div class="qz-main">
+					<h3>轻量弹出层230</h3>
+				</div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui-dialog ui-light-dialog ui-light-dialog-s ui-popover ui-popover-top-right">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui-dialog ui-light-dialog ui-light-dialog-s ui-popover ui-popover-top-right">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+			<div class="qz-grid dialog-warn-grid">
+				<div class="qz-left">
+					<i class="ui-icon sp-dl-notsure"></i>
+				</div>
+				<div class="qz-main fr-limit">
+					<h4>确定要删除域名吗？</h4>
+					<div class="dialog-warn-txt">
+						<p>你还可以在<a href="#">空间设置-空间资料</a> 中重新将它展示出来</p>
+					</div>
+
+				</div>
+			</div>			
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<div class="ui-dialog ui-light-dialog ui-light-dialog-m ui-popover ui-popover-top-right">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+				<div class="qz-main">
+					<h3>轻量弹出层320</h3>
+				</div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui-dialog ui-light-dialog ui-light-dialog-m ui-popover ui-popover-top-middle">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui-dialog ui-light-dialog ui-light-dialog-m ui-popover ui-popover-top-left">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<div class="ui-dialog ui-light-dialog ui-light-dialog-m ui-popover ui-popover-bottom-left">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui-dialog ui-light-dialog ui-light-dialog-m ui-popover ui-popover-bottom-right">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<div class="ui-dialog ui-light-dialog ui-light-dialog-m ui-popover ui-popover-left-top">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui-dialog ui-light-dialog ui-light-dialog-m ui-popover ui-popover-left-bottom">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<div class="ui-dialog ui-light-dialog ui-light-dialog-m ui-popover ui-popover-right-top">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui-dialog ui-light-dialog ui-light-dialog-m ui-popover ui-popover-right-bottom">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-hd">
+			<div class="qz-grid">
+				<div class="qz-right"><a href="#" class="close" title="关闭"><s class="ui-icon sp-dialog-close"></s></a></div>
+			</div>
+		</div>
+		<div class="ui-dl-bd">
+
+		</div>
+		<div class="ui-dl-ft">
+			<div class="qz-grid">
+				<div class="qz-right actions">
+					<a class="qz-button qz-dark-button" href="#"><span class="txt">确定</span></a>
+				</div>
+				<div class="qz-main">左侧内容</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 轻量小提示 -->
+<div class="ui-dialog ui-light-dialog ui-light-dialog-s ui-popover ui-popover-top-right ui-super-light-dialog">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-bd">
+			<div class="qz-grid dialog-warn-grid">
+				<div class="qz-left">
+					<i class="ui-icon sp-dl-wrong"></i>
+				</div>
+				<div class="qz-main">
+					<h4>主人设置了权限，无法加为好友！</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 轻量小提示 结束 -->
+<!-- 轻量小提示 -->
+<div class="ui-dialog ui-light-dialog ui-light-dialog-s ui-popover ui-popover-top-right ui-super-light-dialog">
+	<div class="ui-dl-inner">
+		<b class="ui-dl-arrow ui-dl-arrow1"></b>
+		<b class="ui-dl-arrow ui-dl-arrow2"></b>
+		<div class="ui-dl-bd">
+			<div class="qz-grid dialog-warn-grid">
+				<div class="qz-left">
+					<i class="ui-icon sp-dl-wrong"></i>
+				</div>
+				<div class="qz-main">
+					<h4>请先选择好友！</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 轻量小提示 结束 -->
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../js/prettify.js"></script><!-- 代码高亮 -->
+<script type="text/javascript" src="../js/component.js"></script><!-- 组件布局 -->
+</body>
+</html>

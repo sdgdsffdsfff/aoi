@@ -1,0 +1,39 @@
+﻿/*
+ * Copy Right: Tencent ISUX
+ * Project: Qzone V8
+ * Comments: 按钮
+ * Export to: all
+ * @author: Timezhong
+*/
+
+/*按钮公共*/
+.qz-button{display:inline-block;height:28px;line-height:28px;font-size:12px;padding:0 10px;border-style:solid;border-width:1px;border-radius:2px; text-align:center;white-space:nowrap}
+button.qz-button{cursor:pointer}
+.qz-button:hover{text-decoration:none}
+.qz-button-xs{height:18px;line-height:18px;padding:0 10px;}
+.qz-button-s{height:23px;line-height:23px;padding:0 10px;font-size:12px;}
+.qz-button-m{height:33px;line-height:33px;padding:0 20px;font-size:18px;}
+.qz-button-l{height:38px;line-height:38px;padding:0 25px;font-size:18px;}
+button.qz-button .txt{#line-height:normal}
+/*不可用状态*/
+.qz-button-disabled,
+.qz-dark-button-disabled{opacity:0.5;filter: alpha(opacity=50); cursor:default;}
+.qz-button-disabled .ui-icon,
+.qz-button-disabled .txt,
+.qz-dark-button-disabled .ui-icon,
+.qz-dark-button-disabled .txt{cursor:default;}
+
+/*按钮带ICON*/
+.qz-button .icon-add{width:16px;height:16px;background-image:url(img/icon-slice/add2-normal.png);_background-image:url(img/icon-slice/add2-normal.ie6.png);}
+.qz-button .icon-like{width:16px;height:16px;background-image:url(img/icon-slice/add-care.32.png);_background-image:url(img/icon-slice/add-care.ie6.png);}
+.qz-dark-button .icon-add{width:16px;height:16px;background-image:url(img/icon-slice/add2-normal-light.png);}
+.qz-button .ui-icon{vertical-align:-3px;margin-right:4px;_margin-top:6px;}
+.qz-button-s .ui-icon{_margin-top:4px;}
+.qz-button-m .ui-icon{_margin-top:8px;}
+.qz-button-l .ui-icon{_margin-top:10px;}
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+{
+  "name": "aoi",
+  "version": "0.0.0",
+  "homepage": "https://github.com/isux/aoi",
+  "description": "qzone componts",
+  "keywords": [
+    "qzone",
+    "aoi"
+  ],
+  "authors": [
+    "isux"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
